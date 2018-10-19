@@ -1,0 +1,14 @@
+def generatedMain = new File(buildDir, "generated/main")
+
+compileJava {
+    doFirst {
+        generatedMain.mkdirs()
+    }
+    options.compilerArgs += ['-s', generatedMain]
+}
+
+idea {
+    module {
+        sourceDirs += generatedMain
+    }
+}

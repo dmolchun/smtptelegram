@@ -1,0 +1,5 @@
+rootProject.name = 'smtp_telegram'
+
+include 'smtp', 'api'
+include 'telegram'
+

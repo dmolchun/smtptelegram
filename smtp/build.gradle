@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id "application"
+    id "idea"
+}
+
+apply from: 'dagger.gradle'
+
+mainClassName = 'ru.dibragimov.test.smtp.SmtpApp'
+
+group 'ru.dibragimov.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.+'
+    compile 'com.google.dagger:dagger:2.+'
+    compile 'org.subethamail:subethasmtp:3.1.+'
+    compile 'org.apache.httpcomponents:httpclient:4.3.+'
+    compile 'org.slf4j:slf4j-simple:1.7.+'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.+'
+    compile project(":api")
+}

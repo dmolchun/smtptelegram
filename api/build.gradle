@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id "net.ltgt.apt" version "0.10"
+}
+
+group 'ru.dibragimov.test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+}
